@@ -9,6 +9,14 @@ const style = css`
   color: hotpink;
 `;
 
+const nestedStyle = css`
+  color: red;
+
+  span {
+    text-decoration: underline;
+  }
+`;
+
 const Button = styled.button`
   color: turquoise;
 `;
@@ -21,6 +29,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div css={style}>Hello Vite + React!</div>
+        <div css={nestedStyle}>
+          testing out <span>nested style</span>. Isn't this cool?
+        </div>
         <div>
           <Button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
