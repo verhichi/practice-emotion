@@ -1,24 +1,30 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+import { css } from "@emotion/react";
+
+const style = css`
+  color: hotpink;
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
+        <div css={style}>Hello Vite + React!</div>
+        <div>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
-        </p>
-        <p>
+        </div>
+        <div>
           Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
+        </div>
+        <div>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -27,7 +33,7 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -36,10 +42,10 @@ function App() {
           >
             Vite Docs
           </a>
-        </p>
+        </div>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
