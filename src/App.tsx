@@ -3,9 +3,14 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 const style = css`
   color: hotpink;
+`;
+
+const Button = styled.button`
+  color: turquoise;
 `;
 
 function App() {
@@ -17,9 +22,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div css={style}>Hello Vite + React!</div>
         <div>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <Button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
-          </button>
+          </Button>
         </div>
         <div>
           Edit <code>App.tsx</code> and save to test HMR updates.
